@@ -1,0 +1,194 @@
+2024-01-26 14:13:13,956	models	INFO	{'train': {'log_interval': 200, 'eval_interval': 1000, 'seed': 42, 'epochs': 1000, 'learning_rate': 0.0002, 'betas': [0.8, 0.99], 'eps': 1e-09, 'batch_size': 8, 'bf16_run': False, 'lr_decay': 0.99995, 'segment_size': 16384, 'init_lr_ratio': 1, 'warmup_epochs': 0, 'c_mel': 45, 'c_kl': 1.0, 'c_commit': 100, 'skip_optimizer': True, 'freeze_ZH_bert': False, 'freeze_JP_bert': False, 'freeze_EN_bert': False, 'freeze_emo': False}, 'data': {'training_files': 'data/tinali/train.list', 'validation_files': 'data/tinali/val.list', 'max_wav_value': 32768.0, 'sampling_rate': 44100, 'filter_length': 2048, 'hop_length': 512, 'win_length': 2048, 'n_mel_channels': 128, 'mel_fmin': 0.0, 'mel_fmax': None, 'add_blank': True, 'n_speakers': 1, 'cleaned_text': True, 'spk2id': {'提纳里': 0}}, 'model': {'use_spk_conditioned_encoder': True, 'use_noise_scaled_mas': True, 'use_mel_posterior_encoder': False, 'use_duration_discriminator': True, 'inter_channels': 192, 'hidden_channels': 192, 'filter_channels': 768, 'n_heads': 2, 'n_layers': 6, 'kernel_size': 3, 'p_dropout': 0.1, 'resblock': '1', 'resblock_kernel_sizes': [3, 7, 11], 'resblock_dilation_sizes': [[1, 3, 5], [1, 3, 5], [1, 3, 5]], 'upsample_rates': [8, 8, 2, 2, 2], 'upsample_initial_channel': 512, 'upsample_kernel_sizes': [16, 16, 8, 2, 2], 'n_layers_q': 3, 'use_spectral_norm': False, 'gin_channels': 512, 'slm': {'model': './slm/wavlm-base-plus', 'sr': 16000, 'hidden': 768, 'nlayers': 13, 'initial_channel': 64}}, 'version': '2.3', 'model_dir': './data/tinali\\models'}
+2024-01-26 14:39:11,487	models	INFO	{'train': {'log_interval': 200, 'eval_interval': 1000, 'seed': 42, 'epochs': 1000, 'learning_rate': 0.0002, 'betas': [0.8, 0.99], 'eps': 1e-09, 'batch_size': 8, 'bf16_run': False, 'lr_decay': 0.99995, 'segment_size': 16384, 'init_lr_ratio': 1, 'warmup_epochs': 0, 'c_mel': 45, 'c_kl': 1.0, 'c_commit': 100, 'skip_optimizer': True, 'freeze_ZH_bert': False, 'freeze_JP_bert': False, 'freeze_EN_bert': False, 'freeze_emo': False}, 'data': {'training_files': 'data/tinali/train.list', 'validation_files': 'data/tinali/val.list', 'max_wav_value': 32768.0, 'sampling_rate': 44100, 'filter_length': 2048, 'hop_length': 512, 'win_length': 2048, 'n_mel_channels': 128, 'mel_fmin': 0.0, 'mel_fmax': None, 'add_blank': True, 'n_speakers': 1, 'cleaned_text': True, 'spk2id': {'提纳里': 0}}, 'model': {'use_spk_conditioned_encoder': True, 'use_noise_scaled_mas': True, 'use_mel_posterior_encoder': False, 'use_duration_discriminator': True, 'inter_channels': 192, 'hidden_channels': 192, 'filter_channels': 768, 'n_heads': 2, 'n_layers': 6, 'kernel_size': 3, 'p_dropout': 0.1, 'resblock': '1', 'resblock_kernel_sizes': [3, 7, 11], 'resblock_dilation_sizes': [[1, 3, 5], [1, 3, 5], [1, 3, 5]], 'upsample_rates': [8, 8, 2, 2, 2], 'upsample_initial_channel': 512, 'upsample_kernel_sizes': [16, 16, 8, 2, 2], 'n_layers_q': 3, 'use_spectral_norm': False, 'gin_channels': 512, 'slm': {'model': './slm/wavlm-base-plus', 'sr': 16000, 'hidden': 768, 'nlayers': 13, 'initial_channel': 64}}, 'version': '2.3', 'model_dir': './data/tinali\\models'}
+2024-01-26 14:39:58,448	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.weight is automatically set to zero for backward compatibility
+2024-01-26 14:39:58,449	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.bias is automatically set to zero for backward compatibility
+2024-01-26 14:39:58,449	models	ERROR	enc_p.en_bert_proj.weight is not in the checkpoint
+2024-01-26 14:39:58,449	models	ERROR	enc_p.en_bert_proj.bias is not in the checkpoint
+2024-01-26 14:39:58,449	models	ERROR	enc_p.encoder.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:39:58,450	models	ERROR	dec.cond.weight is not in the checkpoint
+2024-01-26 14:39:58,450	models	ERROR	enc_q.enc.cond_layer.weight_v is not in the checkpoint
+2024-01-26 14:39:58,450	models	ERROR	flow.flows.0.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:39:58,450	models	ERROR	flow.flows.2.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:39:58,450	models	ERROR	flow.flows.4.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:39:58,451	models	ERROR	flow.flows.6.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:39:58,451	models	ERROR	sdp.cond.weight is not in the checkpoint
+2024-01-26 14:39:58,451	models	ERROR	dp.cond.weight is not in the checkpoint
+2024-01-26 14:39:58,451	models	ERROR	emb_g.weight is not in the checkpoint
+2024-01-26 14:39:58,663	models	INFO	Loaded checkpoint './data/tinali\models\G_0.pth' (iteration 0)
+2024-01-26 14:40:09,335	models	INFO	Loaded checkpoint './data/tinali\models\D_0.pth' (iteration 0)
+2024-01-26 14:41:29,567	models	INFO	Loaded checkpoint './data/tinali\models\WD_0.pth' (iteration 0)
+2024-01-26 14:41:46,591	models	INFO	{'train': {'log_interval': 200, 'eval_interval': 1000, 'seed': 42, 'epochs': 1000, 'learning_rate': 0.0002, 'betas': [0.8, 0.99], 'eps': 1e-09, 'batch_size': 8, 'bf16_run': False, 'lr_decay': 0.99995, 'segment_size': 16384, 'init_lr_ratio': 1, 'warmup_epochs': 0, 'c_mel': 45, 'c_kl': 1.0, 'c_commit': 100, 'skip_optimizer': True, 'freeze_ZH_bert': False, 'freeze_JP_bert': False, 'freeze_EN_bert': False, 'freeze_emo': False}, 'data': {'training_files': 'data/tinali/train.list', 'validation_files': 'data/tinali/val.list', 'max_wav_value': 32768.0, 'sampling_rate': 44100, 'filter_length': 2048, 'hop_length': 512, 'win_length': 2048, 'n_mel_channels': 128, 'mel_fmin': 0.0, 'mel_fmax': None, 'add_blank': True, 'n_speakers': 1, 'cleaned_text': True, 'spk2id': {'提纳里': 0}}, 'model': {'use_spk_conditioned_encoder': True, 'use_noise_scaled_mas': True, 'use_mel_posterior_encoder': False, 'use_duration_discriminator': True, 'inter_channels': 192, 'hidden_channels': 192, 'filter_channels': 768, 'n_heads': 2, 'n_layers': 6, 'kernel_size': 3, 'p_dropout': 0.1, 'resblock': '1', 'resblock_kernel_sizes': [3, 7, 11], 'resblock_dilation_sizes': [[1, 3, 5], [1, 3, 5], [1, 3, 5]], 'upsample_rates': [8, 8, 2, 2, 2], 'upsample_initial_channel': 512, 'upsample_kernel_sizes': [16, 16, 8, 2, 2], 'n_layers_q': 3, 'use_spectral_norm': False, 'gin_channels': 512, 'slm': {'model': './slm/wavlm-base-plus', 'sr': 16000, 'hidden': 768, 'nlayers': 13, 'initial_channel': 64}}, 'version': '2.3', 'model_dir': './data/tinali\\models'}
+2024-01-26 14:43:06,478	models	INFO	{'train': {'log_interval': 200, 'eval_interval': 1000, 'seed': 42, 'epochs': 1000, 'learning_rate': 0.0002, 'betas': [0.8, 0.99], 'eps': 1e-09, 'batch_size': 8, 'bf16_run': False, 'lr_decay': 0.99995, 'segment_size': 16384, 'init_lr_ratio': 1, 'warmup_epochs': 0, 'c_mel': 45, 'c_kl': 1.0, 'c_commit': 100, 'skip_optimizer': True, 'freeze_ZH_bert': False, 'freeze_JP_bert': False, 'freeze_EN_bert': False, 'freeze_emo': False}, 'data': {'training_files': 'data/tinali/train.list', 'validation_files': 'data/tinali/val.list', 'max_wav_value': 32768.0, 'sampling_rate': 44100, 'filter_length': 2048, 'hop_length': 512, 'win_length': 2048, 'n_mel_channels': 128, 'mel_fmin': 0.0, 'mel_fmax': None, 'add_blank': True, 'n_speakers': 1, 'cleaned_text': True, 'spk2id': {'提纳里': 0}}, 'model': {'use_spk_conditioned_encoder': True, 'use_noise_scaled_mas': True, 'use_mel_posterior_encoder': False, 'use_duration_discriminator': True, 'inter_channels': 192, 'hidden_channels': 192, 'filter_channels': 768, 'n_heads': 2, 'n_layers': 6, 'kernel_size': 3, 'p_dropout': 0.1, 'resblock': '1', 'resblock_kernel_sizes': [3, 7, 11], 'resblock_dilation_sizes': [[1, 3, 5], [1, 3, 5], [1, 3, 5]], 'upsample_rates': [8, 8, 2, 2, 2], 'upsample_initial_channel': 512, 'upsample_kernel_sizes': [16, 16, 8, 2, 2], 'n_layers_q': 3, 'use_spectral_norm': False, 'gin_channels': 512, 'slm': {'model': './slm/wavlm-base-plus', 'sr': 16000, 'hidden': 768, 'nlayers': 13, 'initial_channel': 64}}, 'version': '2.3', 'model_dir': './data/tinali\\models'}
+2024-01-26 14:43:21,447	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.weight is automatically set to zero for backward compatibility
+2024-01-26 14:43:21,447	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.bias is automatically set to zero for backward compatibility
+2024-01-26 14:43:21,447	models	ERROR	enc_p.en_bert_proj.weight is not in the checkpoint
+2024-01-26 14:43:21,447	models	ERROR	enc_p.en_bert_proj.bias is not in the checkpoint
+2024-01-26 14:43:21,448	models	ERROR	enc_p.encoder.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:43:21,448	models	ERROR	dec.cond.weight is not in the checkpoint
+2024-01-26 14:43:21,448	models	ERROR	enc_q.enc.cond_layer.weight_v is not in the checkpoint
+2024-01-26 14:43:21,448	models	ERROR	flow.flows.0.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:43:21,449	models	ERROR	flow.flows.2.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:43:21,449	models	ERROR	flow.flows.4.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:43:21,449	models	ERROR	flow.flows.6.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:43:21,449	models	ERROR	sdp.cond.weight is not in the checkpoint
+2024-01-26 14:43:21,450	models	ERROR	dp.cond.weight is not in the checkpoint
+2024-01-26 14:43:21,450	models	ERROR	emb_g.weight is not in the checkpoint
+2024-01-26 14:43:21,652	models	INFO	Loaded checkpoint './data/tinali\models\G_0.pth' (iteration 0)
+2024-01-26 14:43:25,929	models	INFO	Loaded checkpoint './data/tinali\models\D_0.pth' (iteration 0)
+2024-01-26 14:50:18,033	models	INFO	Loaded checkpoint './data/tinali\models\WD_0.pth' (iteration 0)
+2024-01-26 14:50:53,294	models	INFO	{'train': {'log_interval': 200, 'eval_interval': 1000, 'seed': 42, 'epochs': 1000, 'learning_rate': 0.0002, 'betas': [0.8, 0.99], 'eps': 1e-09, 'batch_size': 8, 'bf16_run': False, 'lr_decay': 0.99995, 'segment_size': 16384, 'init_lr_ratio': 1, 'warmup_epochs': 0, 'c_mel': 45, 'c_kl': 1.0, 'c_commit': 100, 'skip_optimizer': True, 'freeze_ZH_bert': False, 'freeze_JP_bert': False, 'freeze_EN_bert': False, 'freeze_emo': False}, 'data': {'training_files': 'data/tinali/train.list', 'validation_files': 'data/tinali/val.list', 'max_wav_value': 32768.0, 'sampling_rate': 44100, 'filter_length': 2048, 'hop_length': 512, 'win_length': 2048, 'n_mel_channels': 128, 'mel_fmin': 0.0, 'mel_fmax': None, 'add_blank': True, 'n_speakers': 1, 'cleaned_text': True, 'spk2id': {'提纳里': 0}}, 'model': {'use_spk_conditioned_encoder': True, 'use_noise_scaled_mas': True, 'use_mel_posterior_encoder': False, 'use_duration_discriminator': True, 'inter_channels': 192, 'hidden_channels': 192, 'filter_channels': 768, 'n_heads': 2, 'n_layers': 6, 'kernel_size': 3, 'p_dropout': 0.1, 'resblock': '1', 'resblock_kernel_sizes': [3, 7, 11], 'resblock_dilation_sizes': [[1, 3, 5], [1, 3, 5], [1, 3, 5]], 'upsample_rates': [8, 8, 2, 2, 2], 'upsample_initial_channel': 512, 'upsample_kernel_sizes': [16, 16, 8, 2, 2], 'n_layers_q': 3, 'use_spectral_norm': False, 'gin_channels': 512, 'slm': {'model': './slm/wavlm-base-plus', 'sr': 16000, 'hidden': 768, 'nlayers': 13, 'initial_channel': 64}}, 'version': '2.3', 'model_dir': './data/tinali\\models'}
+2024-01-26 14:51:04,119	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.weight is automatically set to zero for backward compatibility
+2024-01-26 14:51:04,120	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.bias is automatically set to zero for backward compatibility
+2024-01-26 14:51:04,120	models	ERROR	enc_p.en_bert_proj.weight is not in the checkpoint
+2024-01-26 14:51:04,120	models	ERROR	enc_p.en_bert_proj.bias is not in the checkpoint
+2024-01-26 14:51:04,120	models	ERROR	enc_p.encoder.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:51:04,121	models	ERROR	dec.cond.weight is not in the checkpoint
+2024-01-26 14:51:04,121	models	ERROR	enc_q.enc.cond_layer.weight_v is not in the checkpoint
+2024-01-26 14:51:04,121	models	ERROR	flow.flows.0.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:51:04,121	models	ERROR	flow.flows.2.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:51:04,121	models	ERROR	flow.flows.4.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:51:04,122	models	ERROR	flow.flows.6.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:51:04,122	models	ERROR	sdp.cond.weight is not in the checkpoint
+2024-01-26 14:51:04,122	models	ERROR	dp.cond.weight is not in the checkpoint
+2024-01-26 14:51:04,122	models	ERROR	emb_g.weight is not in the checkpoint
+2024-01-26 14:51:04,284	models	INFO	Loaded checkpoint './data/tinali\models\G_2.pth' (iteration 0)
+2024-01-26 14:51:04,530	models	INFO	Loaded checkpoint './data/tinali\models\D_2.pth' (iteration 0)
+2024-01-26 14:52:10,758	models	INFO	{'train': {'log_interval': 200, 'eval_interval': 1000, 'seed': 42, 'epochs': 1000, 'learning_rate': 0.0002, 'betas': [0.8, 0.99], 'eps': 1e-09, 'batch_size': 8, 'bf16_run': False, 'lr_decay': 0.99995, 'segment_size': 16384, 'init_lr_ratio': 1, 'warmup_epochs': 0, 'c_mel': 45, 'c_kl': 1.0, 'c_commit': 100, 'skip_optimizer': True, 'freeze_ZH_bert': False, 'freeze_JP_bert': False, 'freeze_EN_bert': False, 'freeze_emo': False}, 'data': {'training_files': 'data/tinali/train.list', 'validation_files': 'data/tinali/val.list', 'max_wav_value': 32768.0, 'sampling_rate': 44100, 'filter_length': 2048, 'hop_length': 512, 'win_length': 2048, 'n_mel_channels': 128, 'mel_fmin': 0.0, 'mel_fmax': None, 'add_blank': True, 'n_speakers': 1, 'cleaned_text': True, 'spk2id': {'提纳里': 0}}, 'model': {'use_spk_conditioned_encoder': True, 'use_noise_scaled_mas': True, 'use_mel_posterior_encoder': False, 'use_duration_discriminator': True, 'inter_channels': 192, 'hidden_channels': 192, 'filter_channels': 768, 'n_heads': 2, 'n_layers': 6, 'kernel_size': 3, 'p_dropout': 0.1, 'resblock': '1', 'resblock_kernel_sizes': [3, 7, 11], 'resblock_dilation_sizes': [[1, 3, 5], [1, 3, 5], [1, 3, 5]], 'upsample_rates': [8, 8, 2, 2, 2], 'upsample_initial_channel': 512, 'upsample_kernel_sizes': [16, 16, 8, 2, 2], 'n_layers_q': 3, 'use_spectral_norm': False, 'gin_channels': 512, 'slm': {'model': './slm/wavlm-base-plus', 'sr': 16000, 'hidden': 768, 'nlayers': 13, 'initial_channel': 64}}, 'version': '2.3', 'model_dir': './data/tinali\\models'}
+2024-01-26 14:52:25,213	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.weight is automatically set to zero for backward compatibility
+2024-01-26 14:52:25,214	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.bias is automatically set to zero for backward compatibility
+2024-01-26 14:52:25,214	models	ERROR	enc_p.en_bert_proj.weight is not in the checkpoint
+2024-01-26 14:52:25,214	models	ERROR	enc_p.en_bert_proj.bias is not in the checkpoint
+2024-01-26 14:52:25,214	models	ERROR	enc_p.encoder.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:52:25,215	models	ERROR	dec.cond.weight is not in the checkpoint
+2024-01-26 14:52:25,215	models	ERROR	enc_q.enc.cond_layer.weight_v is not in the checkpoint
+2024-01-26 14:52:25,215	models	ERROR	flow.flows.0.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:52:25,215	models	ERROR	flow.flows.2.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:52:25,215	models	ERROR	flow.flows.4.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:52:25,215	models	ERROR	flow.flows.6.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:52:25,216	models	ERROR	sdp.cond.weight is not in the checkpoint
+2024-01-26 14:52:25,216	models	ERROR	dp.cond.weight is not in the checkpoint
+2024-01-26 14:52:25,216	models	ERROR	emb_g.weight is not in the checkpoint
+2024-01-26 14:52:25,423	models	INFO	Loaded checkpoint './data/tinali\models\G_0.pth' (iteration 0)
+2024-01-26 14:52:25,691	models	INFO	Loaded checkpoint './data/tinali\models\D_0.pth' (iteration 0)
+2024-01-26 14:55:01,654	models	INFO	{'train': {'log_interval': 200, 'eval_interval': 1000, 'seed': 42, 'epochs': 1000, 'learning_rate': 0.0002, 'betas': [0.8, 0.99], 'eps': 1e-09, 'batch_size': 8, 'bf16_run': False, 'lr_decay': 0.99995, 'segment_size': 16384, 'init_lr_ratio': 1, 'warmup_epochs': 0, 'c_mel': 45, 'c_kl': 1.0, 'c_commit': 100, 'skip_optimizer': True, 'freeze_ZH_bert': False, 'freeze_JP_bert': False, 'freeze_EN_bert': False, 'freeze_emo': False}, 'data': {'training_files': 'data/tinali/train.list', 'validation_files': 'data/tinali/val.list', 'max_wav_value': 32768.0, 'sampling_rate': 44100, 'filter_length': 2048, 'hop_length': 512, 'win_length': 2048, 'n_mel_channels': 128, 'mel_fmin': 0.0, 'mel_fmax': None, 'add_blank': True, 'n_speakers': 1, 'cleaned_text': True, 'spk2id': {'提纳里': 0}}, 'model': {'use_spk_conditioned_encoder': True, 'use_noise_scaled_mas': True, 'use_mel_posterior_encoder': False, 'use_duration_discriminator': True, 'inter_channels': 192, 'hidden_channels': 192, 'filter_channels': 768, 'n_heads': 2, 'n_layers': 6, 'kernel_size': 3, 'p_dropout': 0.1, 'resblock': '1', 'resblock_kernel_sizes': [3, 7, 11], 'resblock_dilation_sizes': [[1, 3, 5], [1, 3, 5], [1, 3, 5]], 'upsample_rates': [8, 8, 2, 2, 2], 'upsample_initial_channel': 512, 'upsample_kernel_sizes': [16, 16, 8, 2, 2], 'n_layers_q': 3, 'use_spectral_norm': False, 'gin_channels': 512, 'slm': {'model': './slm/wavlm-base-plus', 'sr': 16000, 'hidden': 768, 'nlayers': 13, 'initial_channel': 64}}, 'version': '2.3', 'model_dir': './data/tinali\\models'}
+2024-01-26 14:55:12,322	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.weight is automatically set to zero for backward compatibility
+2024-01-26 14:55:12,322	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.bias is automatically set to zero for backward compatibility
+2024-01-26 14:55:12,322	models	ERROR	enc_p.en_bert_proj.weight is not in the checkpoint
+2024-01-26 14:55:12,322	models	ERROR	enc_p.en_bert_proj.bias is not in the checkpoint
+2024-01-26 14:55:12,322	models	ERROR	enc_p.encoder.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:55:12,323	models	ERROR	dec.cond.weight is not in the checkpoint
+2024-01-26 14:55:12,323	models	ERROR	enc_q.enc.cond_layer.weight_v is not in the checkpoint
+2024-01-26 14:55:12,323	models	ERROR	flow.flows.0.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:55:12,323	models	ERROR	flow.flows.2.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:55:12,323	models	ERROR	flow.flows.4.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:55:12,324	models	ERROR	flow.flows.6.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:55:12,324	models	ERROR	sdp.cond.weight is not in the checkpoint
+2024-01-26 14:55:12,324	models	ERROR	dp.cond.weight is not in the checkpoint
+2024-01-26 14:55:12,324	models	ERROR	emb_g.weight is not in the checkpoint
+2024-01-26 14:55:12,486	models	INFO	Loaded checkpoint './data/tinali\models\G_0.pth' (iteration 0)
+2024-01-26 14:55:21,614	models	INFO	Loaded checkpoint './data/tinali\models\D_0.pth' (iteration 0)
+2024-01-26 14:56:10,162	models	INFO	Loaded checkpoint './data/tinali\models\WD_0.pth' (iteration 0)
+2024-01-26 14:57:14,352	models	INFO	{'train': {'log_interval': 200, 'eval_interval': 1000, 'seed': 42, 'epochs': 1000, 'learning_rate': 0.0002, 'betas': [0.8, 0.99], 'eps': 1e-09, 'batch_size': 8, 'bf16_run': False, 'lr_decay': 0.99995, 'segment_size': 16384, 'init_lr_ratio': 1, 'warmup_epochs': 0, 'c_mel': 45, 'c_kl': 1.0, 'c_commit': 100, 'skip_optimizer': True, 'freeze_ZH_bert': False, 'freeze_JP_bert': False, 'freeze_EN_bert': False, 'freeze_emo': False}, 'data': {'training_files': 'data/tinali/train.list', 'validation_files': 'data/tinali/val.list', 'max_wav_value': 32768.0, 'sampling_rate': 44100, 'filter_length': 2048, 'hop_length': 512, 'win_length': 2048, 'n_mel_channels': 128, 'mel_fmin': 0.0, 'mel_fmax': None, 'add_blank': True, 'n_speakers': 1, 'cleaned_text': True, 'spk2id': {'提纳里': 0}}, 'model': {'use_spk_conditioned_encoder': True, 'use_noise_scaled_mas': True, 'use_mel_posterior_encoder': False, 'use_duration_discriminator': True, 'inter_channels': 192, 'hidden_channels': 192, 'filter_channels': 768, 'n_heads': 2, 'n_layers': 6, 'kernel_size': 3, 'p_dropout': 0.1, 'resblock': '1', 'resblock_kernel_sizes': [3, 7, 11], 'resblock_dilation_sizes': [[1, 3, 5], [1, 3, 5], [1, 3, 5]], 'upsample_rates': [8, 8, 2, 2, 2], 'upsample_initial_channel': 512, 'upsample_kernel_sizes': [16, 16, 8, 2, 2], 'n_layers_q': 3, 'use_spectral_norm': False, 'gin_channels': 512, 'slm': {'model': './slm/wavlm-base-plus', 'sr': 16000, 'hidden': 768, 'nlayers': 13, 'initial_channel': 64}}, 'version': '2.3', 'model_dir': './data/tinali\\models'}
+2024-01-26 14:57:17,611	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.weight is automatically set to zero for backward compatibility
+2024-01-26 14:57:17,611	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.bias is automatically set to zero for backward compatibility
+2024-01-26 14:57:17,611	models	ERROR	enc_p.en_bert_proj.weight is not in the checkpoint
+2024-01-26 14:57:17,611	models	ERROR	enc_p.en_bert_proj.bias is not in the checkpoint
+2024-01-26 14:57:17,611	models	ERROR	enc_p.encoder.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:57:17,612	models	ERROR	dec.cond.weight is not in the checkpoint
+2024-01-26 14:57:17,612	models	ERROR	enc_q.enc.cond_layer.weight_v is not in the checkpoint
+2024-01-26 14:57:17,612	models	ERROR	flow.flows.0.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:57:17,612	models	ERROR	flow.flows.2.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:57:17,613	models	ERROR	flow.flows.4.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:57:17,613	models	ERROR	flow.flows.6.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:57:17,613	models	ERROR	sdp.cond.weight is not in the checkpoint
+2024-01-26 14:57:17,613	models	ERROR	dp.cond.weight is not in the checkpoint
+2024-01-26 14:57:17,614	models	ERROR	emb_g.weight is not in the checkpoint
+2024-01-26 14:57:17,730	models	INFO	Loaded checkpoint './data/tinali\models\G_0.pth' (iteration 0)
+2024-01-26 14:57:17,954	models	INFO	Loaded checkpoint './data/tinali\models\D_0.pth' (iteration 0)
+2024-01-26 14:58:18,481	models	INFO	Loaded checkpoint './data/tinali\models\WD_0.pth' (iteration 0)
+2024-01-26 14:59:04,904	models	INFO	{'train': {'log_interval': 200, 'eval_interval': 1000, 'seed': 42, 'epochs': 1000, 'learning_rate': 0.0002, 'betas': [0.8, 0.99], 'eps': 1e-09, 'batch_size': 8, 'bf16_run': False, 'lr_decay': 0.99995, 'segment_size': 16384, 'init_lr_ratio': 1, 'warmup_epochs': 0, 'c_mel': 45, 'c_kl': 1.0, 'c_commit': 100, 'skip_optimizer': True, 'freeze_ZH_bert': False, 'freeze_JP_bert': False, 'freeze_EN_bert': False, 'freeze_emo': False}, 'data': {'training_files': 'data/tinali/train.list', 'validation_files': 'data/tinali/val.list', 'max_wav_value': 32768.0, 'sampling_rate': 44100, 'filter_length': 2048, 'hop_length': 512, 'win_length': 2048, 'n_mel_channels': 128, 'mel_fmin': 0.0, 'mel_fmax': None, 'add_blank': True, 'n_speakers': 1, 'cleaned_text': True, 'spk2id': {'提纳里': 0}}, 'model': {'use_spk_conditioned_encoder': True, 'use_noise_scaled_mas': True, 'use_mel_posterior_encoder': False, 'use_duration_discriminator': True, 'inter_channels': 192, 'hidden_channels': 192, 'filter_channels': 768, 'n_heads': 2, 'n_layers': 6, 'kernel_size': 3, 'p_dropout': 0.1, 'resblock': '1', 'resblock_kernel_sizes': [3, 7, 11], 'resblock_dilation_sizes': [[1, 3, 5], [1, 3, 5], [1, 3, 5]], 'upsample_rates': [8, 8, 2, 2, 2], 'upsample_initial_channel': 512, 'upsample_kernel_sizes': [16, 16, 8, 2, 2], 'n_layers_q': 3, 'use_spectral_norm': False, 'gin_channels': 512, 'slm': {'model': './slm/wavlm-base-plus', 'sr': 16000, 'hidden': 768, 'nlayers': 13, 'initial_channel': 64}}, 'version': '2.3', 'model_dir': './data/tinali\\models'}
+2024-01-26 14:59:08,168	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.weight is automatically set to zero for backward compatibility
+2024-01-26 14:59:08,168	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.bias is automatically set to zero for backward compatibility
+2024-01-26 14:59:08,169	models	ERROR	enc_p.en_bert_proj.weight is not in the checkpoint
+2024-01-26 14:59:08,169	models	ERROR	enc_p.en_bert_proj.bias is not in the checkpoint
+2024-01-26 14:59:08,169	models	ERROR	enc_p.encoder.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:59:08,169	models	ERROR	dec.cond.weight is not in the checkpoint
+2024-01-26 14:59:08,170	models	ERROR	enc_q.enc.cond_layer.weight_v is not in the checkpoint
+2024-01-26 14:59:08,170	models	ERROR	flow.flows.0.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:59:08,170	models	ERROR	flow.flows.2.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:59:08,170	models	ERROR	flow.flows.4.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:59:08,170	models	ERROR	flow.flows.6.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 14:59:08,171	models	ERROR	sdp.cond.weight is not in the checkpoint
+2024-01-26 14:59:08,171	models	ERROR	dp.cond.weight is not in the checkpoint
+2024-01-26 14:59:08,171	models	ERROR	emb_g.weight is not in the checkpoint
+2024-01-26 14:59:08,293	models	INFO	Loaded checkpoint './data/tinali\models\G_0.pth' (iteration 0)
+2024-01-26 14:59:08,517	models	INFO	Loaded checkpoint './data/tinali\models\D_0.pth' (iteration 0)
+2024-01-26 14:59:08,528	models	INFO	Loaded checkpoint './data/tinali\models\WD_0.pth' (iteration 0)
+2024-01-26 15:00:07,314	models	INFO	{'train': {'log_interval': 200, 'eval_interval': 1000, 'seed': 42, 'epochs': 1000, 'learning_rate': 0.0002, 'betas': [0.8, 0.99], 'eps': 1e-09, 'batch_size': 8, 'bf16_run': False, 'lr_decay': 0.99995, 'segment_size': 16384, 'init_lr_ratio': 1, 'warmup_epochs': 0, 'c_mel': 45, 'c_kl': 1.0, 'c_commit': 100, 'skip_optimizer': True, 'freeze_ZH_bert': False, 'freeze_JP_bert': False, 'freeze_EN_bert': False, 'freeze_emo': False}, 'data': {'training_files': 'data/tinali/train.list', 'validation_files': 'data/tinali/val.list', 'max_wav_value': 32768.0, 'sampling_rate': 44100, 'filter_length': 2048, 'hop_length': 512, 'win_length': 2048, 'n_mel_channels': 128, 'mel_fmin': 0.0, 'mel_fmax': None, 'add_blank': True, 'n_speakers': 1, 'cleaned_text': True, 'spk2id': {'提纳里': 0}}, 'model': {'use_spk_conditioned_encoder': True, 'use_noise_scaled_mas': True, 'use_mel_posterior_encoder': False, 'use_duration_discriminator': True, 'inter_channels': 192, 'hidden_channels': 192, 'filter_channels': 768, 'n_heads': 2, 'n_layers': 6, 'kernel_size': 3, 'p_dropout': 0.1, 'resblock': '1', 'resblock_kernel_sizes': [3, 7, 11], 'resblock_dilation_sizes': [[1, 3, 5], [1, 3, 5], [1, 3, 5]], 'upsample_rates': [8, 8, 2, 2, 2], 'upsample_initial_channel': 512, 'upsample_kernel_sizes': [16, 16, 8, 2, 2], 'n_layers_q': 3, 'use_spectral_norm': False, 'gin_channels': 512, 'slm': {'model': './slm/wavlm-base-plus', 'sr': 16000, 'hidden': 768, 'nlayers': 13, 'initial_channel': 64}}, 'version': '2.3', 'model_dir': './data/tinali\\models'}
+2024-01-26 15:00:10,562	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.weight is automatically set to zero for backward compatibility
+2024-01-26 15:00:10,563	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.bias is automatically set to zero for backward compatibility
+2024-01-26 15:00:10,563	models	ERROR	enc_p.en_bert_proj.weight is not in the checkpoint
+2024-01-26 15:00:10,563	models	ERROR	enc_p.en_bert_proj.bias is not in the checkpoint
+2024-01-26 15:00:10,563	models	ERROR	enc_p.encoder.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 15:00:10,563	models	ERROR	dec.cond.weight is not in the checkpoint
+2024-01-26 15:00:10,564	models	ERROR	enc_q.enc.cond_layer.weight_v is not in the checkpoint
+2024-01-26 15:00:10,564	models	ERROR	flow.flows.0.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 15:00:10,564	models	ERROR	flow.flows.2.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 15:00:10,564	models	ERROR	flow.flows.4.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 15:00:10,564	models	ERROR	flow.flows.6.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 15:00:10,565	models	ERROR	sdp.cond.weight is not in the checkpoint
+2024-01-26 15:00:10,565	models	ERROR	dp.cond.weight is not in the checkpoint
+2024-01-26 15:00:10,565	models	ERROR	emb_g.weight is not in the checkpoint
+2024-01-26 15:00:10,684	models	INFO	Loaded checkpoint './data/tinali\models\G_0.pth' (iteration 0)
+2024-01-26 15:00:10,914	models	INFO	Loaded checkpoint './data/tinali\models\D_0.pth' (iteration 0)
+2024-01-26 15:00:10,925	models	INFO	Loaded checkpoint './data/tinali\models\WD_0.pth' (iteration 0)
+2024-01-26 15:03:44,356	models	INFO	{'train': {'log_interval': 200, 'eval_interval': 1000, 'seed': 42, 'epochs': 1000, 'learning_rate': 0.0002, 'betas': [0.8, 0.99], 'eps': 1e-09, 'batch_size': 8, 'bf16_run': False, 'lr_decay': 0.99995, 'segment_size': 16384, 'init_lr_ratio': 1, 'warmup_epochs': 0, 'c_mel': 45, 'c_kl': 1.0, 'c_commit': 100, 'skip_optimizer': True, 'freeze_ZH_bert': False, 'freeze_JP_bert': False, 'freeze_EN_bert': False, 'freeze_emo': False}, 'data': {'training_files': 'data/tinali/train.list', 'validation_files': 'data/tinali/val.list', 'max_wav_value': 32768.0, 'sampling_rate': 44100, 'filter_length': 2048, 'hop_length': 512, 'win_length': 2048, 'n_mel_channels': 128, 'mel_fmin': 0.0, 'mel_fmax': None, 'add_blank': True, 'n_speakers': 1, 'cleaned_text': True, 'spk2id': {'提纳里': 0}}, 'model': {'use_spk_conditioned_encoder': True, 'use_noise_scaled_mas': True, 'use_mel_posterior_encoder': False, 'use_duration_discriminator': True, 'inter_channels': 192, 'hidden_channels': 192, 'filter_channels': 768, 'n_heads': 2, 'n_layers': 6, 'kernel_size': 3, 'p_dropout': 0.1, 'resblock': '1', 'resblock_kernel_sizes': [3, 7, 11], 'resblock_dilation_sizes': [[1, 3, 5], [1, 3, 5], [1, 3, 5]], 'upsample_rates': [8, 8, 2, 2, 2], 'upsample_initial_channel': 512, 'upsample_kernel_sizes': [16, 16, 8, 2, 2], 'n_layers_q': 3, 'use_spectral_norm': False, 'gin_channels': 512, 'slm': {'model': './slm/wavlm-base-plus', 'sr': 16000, 'hidden': 768, 'nlayers': 13, 'initial_channel': 64}}, 'version': '2.3', 'model_dir': './data/tinali\\models'}
+2024-01-26 15:05:53,540	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.weight is automatically set to zero for backward compatibility
+2024-01-26 15:05:53,541	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.bias is automatically set to zero for backward compatibility
+2024-01-26 15:05:53,541	models	ERROR	enc_p.en_bert_proj.weight is not in the checkpoint
+2024-01-26 15:05:53,541	models	ERROR	enc_p.en_bert_proj.bias is not in the checkpoint
+2024-01-26 15:05:53,541	models	ERROR	enc_p.encoder.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 15:05:53,542	models	ERROR	dec.cond.weight is not in the checkpoint
+2024-01-26 15:05:53,542	models	ERROR	enc_q.enc.cond_layer.weight_v is not in the checkpoint
+2024-01-26 15:05:53,542	models	ERROR	flow.flows.0.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 15:05:53,542	models	ERROR	flow.flows.2.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 15:05:53,542	models	ERROR	flow.flows.4.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 15:05:53,543	models	ERROR	flow.flows.6.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 15:05:53,543	models	ERROR	sdp.cond.weight is not in the checkpoint
+2024-01-26 15:05:53,543	models	ERROR	dp.cond.weight is not in the checkpoint
+2024-01-26 15:05:53,543	models	ERROR	emb_g.weight is not in the checkpoint
+2024-01-26 15:05:53,743	models	INFO	Loaded checkpoint './data/tinali\models\G_0.pth' (iteration 0)
+2024-01-26 15:05:54,017	models	INFO	Loaded checkpoint './data/tinali\models\D_0.pth' (iteration 0)
+2024-01-26 15:05:59,425	models	INFO	Loaded checkpoint './data/tinali\models\WD_0.pth' (iteration 0)
+2024-01-26 15:08:04,343	models	INFO	{'train': {'log_interval': 200, 'eval_interval': 1000, 'seed': 42, 'epochs': 1000, 'learning_rate': 0.0002, 'betas': [0.8, 0.99], 'eps': 1e-09, 'batch_size': 8, 'bf16_run': False, 'lr_decay': 0.99995, 'segment_size': 16384, 'init_lr_ratio': 1, 'warmup_epochs': 0, 'c_mel': 45, 'c_kl': 1.0, 'c_commit': 100, 'skip_optimizer': True, 'freeze_ZH_bert': False, 'freeze_JP_bert': False, 'freeze_EN_bert': False, 'freeze_emo': False}, 'data': {'training_files': 'data/tinali/train.list', 'validation_files': 'data/tinali/val.list', 'max_wav_value': 32768.0, 'sampling_rate': 44100, 'filter_length': 2048, 'hop_length': 512, 'win_length': 2048, 'n_mel_channels': 128, 'mel_fmin': 0.0, 'mel_fmax': None, 'add_blank': True, 'n_speakers': 1, 'cleaned_text': True, 'spk2id': {'提纳里': 0}}, 'model': {'use_spk_conditioned_encoder': True, 'use_noise_scaled_mas': True, 'use_mel_posterior_encoder': False, 'use_duration_discriminator': True, 'inter_channels': 192, 'hidden_channels': 192, 'filter_channels': 768, 'n_heads': 2, 'n_layers': 6, 'kernel_size': 3, 'p_dropout': 0.1, 'resblock': '1', 'resblock_kernel_sizes': [3, 7, 11], 'resblock_dilation_sizes': [[1, 3, 5], [1, 3, 5], [1, 3, 5]], 'upsample_rates': [8, 8, 2, 2, 2], 'upsample_initial_channel': 512, 'upsample_kernel_sizes': [16, 16, 8, 2, 2], 'n_layers_q': 3, 'use_spectral_norm': False, 'gin_channels': 512, 'slm': {'model': './slm/wavlm-base-plus', 'sr': 16000, 'hidden': 768, 'nlayers': 13, 'initial_channel': 64}}, 'version': '2.3', 'model_dir': './data/tinali\\models'}
+2024-01-26 15:08:20,511	models	ERROR	cond.weight is not in the checkpoint
+2024-01-26 15:08:20,515	models	INFO	Loaded checkpoint './data/tinali\models\DUR_0.pth' (iteration 0)
+2024-01-26 15:08:27,093	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.weight is automatically set to zero for backward compatibility
+2024-01-26 15:08:27,094	models	WARNING	Seems you are using the old version of the model, the enc_p.ja_bert_proj.bias is automatically set to zero for backward compatibility
+2024-01-26 15:08:27,094	models	ERROR	enc_p.en_bert_proj.weight is not in the checkpoint
+2024-01-26 15:08:27,094	models	ERROR	enc_p.en_bert_proj.bias is not in the checkpoint
+2024-01-26 15:08:27,094	models	ERROR	enc_p.encoder.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 15:08:27,095	models	ERROR	dec.cond.weight is not in the checkpoint
+2024-01-26 15:08:27,095	models	ERROR	enc_q.enc.cond_layer.weight_v is not in the checkpoint
+2024-01-26 15:08:27,095	models	ERROR	flow.flows.0.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 15:08:27,095	models	ERROR	flow.flows.2.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 15:08:27,095	models	ERROR	flow.flows.4.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 15:08:27,096	models	ERROR	flow.flows.6.enc.spk_emb_linear.weight is not in the checkpoint
+2024-01-26 15:08:27,096	models	ERROR	sdp.cond.weight is not in the checkpoint
+2024-01-26 15:08:27,096	models	ERROR	dp.cond.weight is not in the checkpoint
+2024-01-26 15:08:27,096	models	ERROR	emb_g.weight is not in the checkpoint
+2024-01-26 15:08:27,342	models	INFO	Loaded checkpoint './data/tinali\models\G_0.pth' (iteration 0)
+2024-01-26 15:08:27,632	models	INFO	Loaded checkpoint './data/tinali\models\D_0.pth' (iteration 0)
+2024-01-26 15:08:33,048	models	INFO	Loaded checkpoint './data/tinali\models\WD_0.pth' (iteration 0)
+2024-01-26 15:13:58,208	models	INFO	Train Epoch: 0 [0%]
+2024-01-26 15:13:58,261	models	INFO	[2.711029052734375, 2.863933563232422, 22.652679443359375, 21.690185546875, 7.717948913574219, 126.16341400146484, 0, 0.00019999000000000001]
+2024-01-26 15:14:06,423	models	INFO	Saving model and optimizer state at iteration 0 to ./data/tinali\models\G_0.pth
+2024-01-26 15:14:20,679	models	INFO	Saving model and optimizer state at iteration 0 to ./data/tinali\models\D_0.pth
+2024-01-26 15:14:32,571	models	INFO	Saving model and optimizer state at iteration 0 to ./data/tinali\models\WD_0.pth
+2024-01-26 15:14:32,885	models	INFO	Saving model and optimizer state at iteration 0 to ./data/tinali\models\DUR_0.pth
+2024-01-26 15:14:33,596	models	INFO	====> Epoch: 0
+2024-01-26 15:15:26,224	models	INFO	{'train': {'log_interval': 200, 'eval_interval': 1000, 'seed': 42, 'epochs': 1000, 'learning_rate': 0.0002, 'betas': [0.8, 0.99], 'eps': 1e-09, 'batch_size': 8, 'bf16_run': False, 'lr_decay': 0.99995, 'segment_size': 16384, 'init_lr_ratio': 1, 'warmup_epochs': 0, 'c_mel': 45, 'c_kl': 1.0, 'c_commit': 100, 'skip_optimizer': True, 'freeze_ZH_bert': False, 'freeze_JP_bert': False, 'freeze_EN_bert': False, 'freeze_emo': False}, 'data': {'training_files': 'data/tinali/train.list', 'validation_files': 'data/tinali/val.list', 'max_wav_value': 32768.0, 'sampling_rate': 44100, 'filter_length': 2048, 'hop_length': 512, 'win_length': 2048, 'n_mel_channels': 128, 'mel_fmin': 0.0, 'mel_fmax': None, 'add_blank': True, 'n_speakers': 1, 'cleaned_text': True, 'spk2id': {'提纳里': 0}}, 'model': {'use_spk_conditioned_encoder': True, 'use_noise_scaled_mas': True, 'use_mel_posterior_encoder': False, 'use_duration_discriminator': True, 'inter_channels': 192, 'hidden_channels': 192, 'filter_channels': 768, 'n_heads': 2, 'n_layers': 6, 'kernel_size': 3, 'p_dropout': 0.1, 'resblock': '1', 'resblock_kernel_sizes': [3, 7, 11], 'resblock_dilation_sizes': [[1, 3, 5], [1, 3, 5], [1, 3, 5]], 'upsample_rates': [8, 8, 2, 2, 2], 'upsample_initial_channel': 512, 'upsample_kernel_sizes': [16, 16, 8, 2, 2], 'n_layers_q': 3, 'use_spectral_norm': False, 'gin_channels': 512, 'slm': {'model': './slm/wavlm-base-plus', 'sr': 16000, 'hidden': 768, 'nlayers': 13, 'initial_channel': 64}}, 'version': '2.3', 'model_dir': './data/tinali\\models'}
+2024-01-26 15:15:28,380	models	INFO	Loaded checkpoint './data/tinali\models\DUR_0.pth' (iteration 0)
+2024-01-26 15:15:44,024	models	INFO	Loaded checkpoint './data/tinali\models\G_0.pth' (iteration 0)
+2024-01-26 15:15:48,737	models	INFO	Loaded checkpoint './data/tinali\models\D_0.pth' (iteration 0)
+2024-01-26 15:15:48,749	models	INFO	Loaded checkpoint './data/tinali\models\WD_0.pth' (iteration 0)
