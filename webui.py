@@ -401,7 +401,7 @@ if __name__ == "__main__":
                     """,
                 )
                 trans = gr.Button("中翻日", variant="primary")
-                slicer = gr.Button("快速切分", variant="primary")
+                # slicer = gr.Button("快速切分", variant="primary")
                 formatter = gr.Button("检测语言，并整理为 MIX 格式", variant="primary")
                 speaker = gr.Dropdown(
                     choices=speakers, value=speakers[0], label="Speaker"

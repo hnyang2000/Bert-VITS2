@@ -32,10 +32,12 @@
     "mel_fmin": 0.0,
     "mel_fmax": null,
     "add_blank": true,
-    "n_speakers": 1,
+    "n_speakers": 3,
     "cleaned_text": true,
     "spk2id": {
-      "ying": 0
+      "ying": 0,
+	  "bachong": 1,
+	  "pai": 2
     }
   },
   "model": {

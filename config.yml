@@ -102,9 +102,11 @@ webui:
   # 推理设备
   device: "cuda"
   # 模型路径
-  model: "models/leidian/models/G_4600.pth"
+  model: "models/ying/models/G_4600.pth"
+#  model: "models/bachong/models/G_47700.pth"
   # 配置文件路径
-  config_path: "models/leidian/config.json"
+  config_path: "models/ying/config.json"
+#  config_path: "models/bachong/config.json"
   # 端口号
   port: 7860
   # 是否公开部署，对外网开放
